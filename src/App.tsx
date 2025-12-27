@@ -3,6 +3,8 @@ import './App.css'
 import Sidebar from './components/Sidebar'
 import MainContent from './components/MainContent'
 import ProductPage from './components/ProductPage'
+import TopSellers from './components/TopSellers'
+import PopularBlogs from './components/PopularBlogs'
 
 function App() {
   
@@ -11,13 +13,16 @@ function App() {
     <Router>
       <div className="flex h-screen">
         <Sidebar />
-
-        <div className="rounded w-full flex justify-between flex-wrap">
+        <div className="rounded w-full flex justify-center flex-wrap">
           <Routes>
             <Route path='/' element={<MainContent />} />
             <Route path='/product/:id' element={<ProductPage />} />
-          </Routes>
+          </Routes>          
         </div>
+        <div>
+            <TopSellers />
+            <PopularBlogs />
+          </div>
       </div>
     </Router>
   )
